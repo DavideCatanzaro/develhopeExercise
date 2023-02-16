@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="eng">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>HTML Lesson</title>
+    <style>
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <label for="email">Insert Email</label>
+      <input type="email" name="email">
+      <br>
+      <br>
+      <label for="password">Insert Password</label>
+      <input type="password" name="password">
+      <br>
+      <br>
+      <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" placeholder="Mario"
+            required pattern="[A-Za-z]+" minlength="2"  maxlength="20">
+      <br>
+      <br>
+      <label for="lastName">LastName Name:</label>
+      <input type="text" name="lastName" placeholder="Rossi" 
+            required pattern="[A-Za-z]+" minlength="2"  maxlength="20">
+      <br>
+      <br>
+      <label for="date">Date Of Your Birth</label>
+      <input type="date" name="date">
+      <br>
+      <br>
+      <label for="telephoneNumber">Insert Telephone Number</label>
+      <input type="text" name="telephoneNumber" required pattern="[0-9]" minlength="10" maxlength="10">
+      <br>
+      <br>
+      <label>Select your plan:</label>
+      <select name="plane" id="plane" >
+        <option value="Free plan">FREE PLAN</option>
+        <option value="Free plan">FRIST CLASS PLAN 100$</option>
+        <option value="Free plan">SECOND CLASS PLAN 50$</option>
+        <option value="Free plan">THIRD CLASSPLAN 20$</option>
+      </select>
+      <label for="proPlan">Select for a Pro Plane:</label>
+      <input type="checkbox" name="proPlan" value="Selected">
+      <br>
+      <br>
+      <table>
+        <tr>
+          <th><label for="numberCard">Insert Credit Number Card</label></th>
+          <th><label for="cvc">Insert CVC</label></th>
+        </tr>
+        <tr>
+          <td><input type="text" name="numberCard" required pattern="[0-9]" minlength="16" maxlength="16"></td>
+          <td><input type="text" name="cvc" required pattern="[0-9]" minlength="3" maxlength="3"></td>
+        </tr>
+      </table>
+      <br>
+      <label for="expiration">Expiration Date Of The Card</label>
+      <input type="date" name="expiration">
+      <br>
+      <br>
+      <label for="address">Billing Address</label>
+      <input type="text" name="address">
+      <br>
+      <br>
+      <button>SUBMIT</button>
+    </form>
+  </body>
+</html>
