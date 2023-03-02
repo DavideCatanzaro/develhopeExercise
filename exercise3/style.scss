@@ -1,0 +1,44 @@
+@use "variables.scss";
+@use "function.scss";
+$colorRed: variables.$colore-primary;
+$colorBlue: variables.$colore-secondary;
+$colorGreen: variables.$color-ternary;
+html{
+    font-size: 62.5%;
+}
+.container {
+  border: 1px solid $colorRed;
+  padding: 20px;
+}
+.exercise {
+  display: flex;
+  border: 1px solid $colorGreen;
+  &:nth-child(odd) {
+    color: $colorBlue;
+  }
+  &:nth-child(even) {
+    color:$colorRed;
+  }
+}
+.title {
+  text-align: center;
+  color: $colorGreen;
+  font-weight: 100 ;
+  text-decoration:underline;
+  text-decoration-color: $colorBlue;
+  text-underline-offset: 5px;
+}
+.exercise article {
+  @extend .exercise;
+ padding: 0 10px;
+}
+@mixin footer($color:$colorGreen, $border-color: $colorBlue, $font-size:function.convertitor-size(38.4px)){
+    display: flex;
+    border: 2px solid $border-color;
+    color: $color;
+    font-size: $font-size;
+    margin-top: 10px;
+}
+.mixin{
+    @include footer()
+}
