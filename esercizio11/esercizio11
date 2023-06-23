@@ -1,0 +1,40 @@
+import 'express-async-errors'
+const express = require("express");
+const app = express();
+const planets = require("./database");
+
+app.use(express.json())
+
+
+app.get("/api/planets",(res,req)=>{
+res.status(200).json({msg: "t'appo"})
+})
+ 
+app.get("/api/planets/:id",(res,req)=>{
+    const {id} = req.params;
+    const planet = planets.find((planet)=> planet.id === id )
+    res.json(planet)
+})
+
+app.post(`/api/planets`,(res,req)=>{
+    console.log(req.body)
+    const planet = req.body
+    planets.push(planet);
+    res.status(200).json({msg: "t'appo"})
+})
+
+app.put(`/api/planets/:id`, (res,req)=>{
+    const {id} = req.params;
+    const planet = req.body;
+    planets[Number(id) - 1] = planet;
+    res.status(200).json({msg: "t'appo"})
+})
+
+app.delete(`/api/planets/:1`, (res,req)=>{
+    const {id} = req.params;
+    const index = planet.findIndex((planet)=> planet.id === id);
+    planet.slice(index,1);
+    res.status(200).json({msg: "t'appo"})
+})
+
+app.listen(3000)

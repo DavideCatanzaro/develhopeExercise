@@ -4,7 +4,7 @@
   "description": "ESERCIZI DEVELHOPE",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./esercizio10/esercizio10.js"
+    "start": "nodemon ./liveCoding/exercise.js"
   },
   "repository": {
     "type": "git",
